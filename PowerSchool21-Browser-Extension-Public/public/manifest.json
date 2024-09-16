@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "PowerSchool21 Browser Extension",
+  "version": "1.0.1",
+  "description": "A browser extension for the PowerSchool21 team.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
